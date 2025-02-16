@@ -13,9 +13,9 @@
         .lang-switch { position: absolute; top: 20px; right: 20px; background: white; padding: 5px 10px; border-radius: 5px; }
         .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
         .donate-button img { width: 150px; }
-        .section { margin-top: 20px; text-align: left; }
-        .toggle-button { background: none; border: none; color: blue; cursor: pointer; font-size: 16px; }
-        .hidden-content { display: none; }
+        .section { margin-top: 20px; text-align: left; padding: 10px; }
+        .toggle-button { background: #0165fc; color: white; border: none; cursor: pointer; font-size: 16px; padding: 5px 10px; border-radius: 5px; }
+        .hidden-content { display: none; margin-top: 10px; padding: 10px; background: #f4f4f4; border-radius: 5px; }
     </style>
     <script>
         function toggleContent(id, button) {
@@ -38,20 +38,22 @@
     <div class="container">
         <h1>Welcome to IATTV</h1>
         <p>We are dedicated to spreading faith and positivity through our ministry.</p>
-        
-        <div class="section">
-            <h2>Our Mission</h2>
-            <p>To inspire, uplift, and serve our community with love and faith.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Support Our Mission</h2>
-            <p>Your donations help us continue our work.</p>
-            <button class="toggle-button" onclick="toggleContent('supportContent', this)">Show More</button>
-            <p id="supportContent" class="hidden-content">Click below to contribute and make a difference.</p>
+    </div>
+    
+    <div class="container section">
+        <h2>Our Mission</h2>
+        <p>To inspire, uplift, and serve our community with love and faith.</p>
+    </div>
+    
+    <div class="container section">
+        <h2>Support Our Mission</h2>
+        <p>Your donations help us continue our work.</p>
+        <button class="toggle-button" onclick="toggleContent('supportContent', this)">Show More</button>
+        <div id="supportContent" class="hidden-content">
+            <p>Click below to contribute and make a difference.</p>
         </div>
     </div>
-
+    
     <div class="donate-button-container">
         <div id="donate-button"></div>
         <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
@@ -67,8 +69,8 @@
         }).render('#donate-button');
         </script>
     </div>
-
-    <div class="container" style="margin-top: 20px;">
+    
+    <div class="container section">
         <h2>Contact Us</h2>
         <p>Email: contact@iattv.org</p>
     </div>
