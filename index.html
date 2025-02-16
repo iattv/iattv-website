@@ -4,40 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IATTV - Ministry</title>
+    <meta name="description" content="IATTV - Inspiring, uplifting, and serving the community with faith and love.">
+    <meta property="og:title" content="IATTV - Ministry">
+    <meta property="og:description" content="Join us in spreading faith and positivity. Support our mission today.">
+    <meta property="og:image" content="/path-to-your-logo.png">
+    <meta property="og:url" content="https://iattv.org">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #0165fc; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #0165fc; color: white; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); color: black; }
         h1 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
-        .footer { margin-top: 20px; font-size: 14px; color: #777; }
-        .lang-switch { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.8); padding: 5px 10px; border-radius: 5px; }
-        .donate-button-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .donate-button img {
-            width: 150px;
-        }
-        .section {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .content {
-            display: none;
-            margin-top: 10px;
-        }
-        .toggle-button {
-            background: #0165fc;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
+        .footer { margin-top: 20px; font-size: 14px; color: #ddd; }
+        .lang-switch { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.2); padding: 5px 10px; border-radius: 5px; }
+        .expandable { cursor: pointer; font-weight: bold; margin-top: 10px; padding: 10px; background: #0165fc; color: white; border-radius: 5px; border: none; }
+        .content { display: none; padding: 10px; background: white; color: black; border-radius: 5px; }
+        .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .donate-button img { width: 180px; }
     </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Language Switch -->
@@ -48,33 +41,15 @@
     <div class="container">
         <h1>Welcome to IATTV</h1>
         <p>We are dedicated to spreading faith and positivity through our ministry.</p>
-    </div>
-
-    <div class="container section">
-        <h2>Our Mission</h2>
-        <p>To inspire, uplift, and serve our community with love and faith.</p>
-        <div class="content" id="mission-content">
-            <p>Our work includes outreach programs, spiritual guidance, and community support to help individuals grow in faith.</p>
+        <button class="expandable" onclick="toggleContent('mission')">Our Mission ▼</button>
+        <div id="mission" class="content">
+            <p>To inspire, uplift, and serve our community with love and faith.</p>
         </div>
-        <button class="toggle-button" onclick="toggleContent('mission-content', this)">More</button>
-    </div>
-
-    <div class="container section">
-        <h2>Support Our Mission</h2>
-        <p>Your donations help us continue our work. Click below to contribute.</p>
-        <div class="content" id="support-content">
-            <p>Every contribution helps us reach more people and provide resources for those in need.</p>
+        
+        <button class="expandable" onclick="toggleContent('support')">Support Our Mission ▼</button>
+        <div id="support" class="content">
+            <p>Your donations help us continue our work. Click below to contribute.</p>
         </div>
-        <button class="toggle-button" onclick="toggleContent('support-content', this)">More</button>
-    </div>
-
-    <div class="container section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@iattv.org</p>
-        <div class="content" id="contact-content">
-            <p>We welcome your questions, suggestions, and support. Feel free to reach out to us anytime.</p>
-        </div>
-        <button class="toggle-button" onclick="toggleContent('contact-content', this)">More</button>
     </div>
 
     <!-- PayPal Donation Button Floating -->
@@ -94,20 +69,13 @@
         </script>
     </div>
 
-    <script>
-        function toggleContent(id, button) {
-            var content = document.getElementById(id);
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-                button.textContent = "Less";
-            } else {
-                content.style.display = "none";
-                button.textContent = "More";
-            }
-        }
-    </script>
-
+    <div class="container" style="margin-top: 20px;">
+        <button class="expandable" onclick="toggleContent('contact')">Contact Us ▼</button>
+        <div id="contact" class="content">
+            <p>Email: contact@iattv.org</p>
+        </div>
+    </div>
+    
     <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
 </body>
 </html>
-
