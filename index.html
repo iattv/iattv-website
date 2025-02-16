@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IATTV - Ministry</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .container { max-width: 600px; margin: auto; }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f4f4f4; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         h1 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
         .footer { margin-top: 20px; font-size: 14px; color: #777; }
         .lang-switch { position: absolute; top: 20px; right: 20px; }
+        
+        /* Floating PayPal Button */
+        .paypal-button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0070ba;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .paypal-button-container img {
+            width: 50px;
+            height: auto;
+        }
     </style>
-    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
 </head>
 <body>
     <!-- Language Switch -->
@@ -28,23 +42,30 @@
         
         <h2>Support Our Mission</h2>
         <p>Your donations help us continue our work. Click below to contribute.</p>
-        
-        <!-- PayPal Donation Button -->
-        <div id="donate-button-container">
-            <div id="donate-button"></div>
-            <script>
-                PayPal.Donation.Button({
-                    env:'production',
-                    hosted_button_id:'KRX475LR72CA4',
-                    image: {
-                        src:'https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif',
-                        alt:'Donar con el botón PayPal',
-                        title:'PayPal - The safer, easier way to pay online!'
-                    }
-                }).render('#donate-button');
-            </script>
-        </div>
-        
+    </div>
+    
+    <!-- Floating PayPal Donation Button -->
+    <div class="paypal-button-container">
+        <div id="donate-button"></div>
+        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+        <script>
+            PayPal.Donation.Button({
+                env:'production',
+                hosted_button_id:'KRX475LR72CA4',
+                image: {
+                    src:'https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif',
+                    alt:'Donate with PayPal',
+                    title:'PayPal - The safer, easier way to pay online!'
+                }
+            }).render('#donate-button');
+        </script>
+    </div>
+    
+    <div class="container">
         <h2>Contact Us</h2>
         <p>Email: contact@iattv.org</p>
     </div>
+    
+    <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
+</body>
+</html>
