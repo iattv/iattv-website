@@ -1,54 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IATTV - Ministry</title>
+    <title>IATTV - Ministerio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .container { max-width: 600px; margin: auto; }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #cce7ff, #f2f8ff);
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
         h1 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
-        .footer { margin-top: 20px; font-size: 14px; color: #777; }
-        .lang-switch { position: absolute; top: 20px; right: 20px; }
+        .donate-button {
+            background: #0070ba;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .donate-button:hover {
+            background: #005a9e;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
     </style>
-    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
 </head>
 <body>
     <!-- Language Switch -->
     <div class="lang-switch">
-        <a href="index-es.html">🇪🇸 Español</a>
+        <a href="index.html">🇬🇧 English</a>
     </div>
 
     <div class="container">
-        <h1>Welcome to IATTV</h1>
-        <p>We are dedicated to spreading faith and positivity through our ministry.</p>
-        <h2>Our Mission</h2>
-        <p>To inspire, uplift, and serve our community with love and faith.</p>
+        <h1>Bienvenidos a IATTV</h1>
+        <p>Nos dedicamos a difundir la fe y la positividad a través de nuestro ministerio.</p>
+        <h2>Nuestra Misión</h2>
+        <p>Inspirar, elevar y servir a nuestra comunidad con amor y fe.</p>
         
-        <h2>Support Our Mission</h2>
-        <p>Your donations help us continue our work. Click below to contribute.</p>
+        <h2>Apoya Nuestra Misión</h2>
+        <p>Tus donaciones nos ayudan a continuar nuestro trabajo. Haz clic abajo para contribuir.</p>
         
-        <!-- PayPal Donation Button -->
+        <!-- Botón de Donación de PayPal -->
         <div id="donate-button-container">
             <div id="donate-button"></div>
+            <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
             <script>
                 PayPal.Donation.Button({
-                    env:'production',
-                    hosted_button_id:'KRX475LR72CA4',
+                    env: 'production',
+                    hosted_button_id: 'KRX475LR72CA4',
                     image: {
-                        src:'https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif',
-                        alt:'Donar con el botón PayPal',
-                        title:'PayPal - The safer, easier way to pay online!'
+                        src: 'https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif',
+                        alt: 'Donar con el botón PayPal',
+                        title: 'PayPal - The safer, easier way to pay online!'
                     }
                 }).render('#donate-button');
             </script>
         </div>
         
-        <h2>Contact Us</h2>
+        <h2>Contáctanos</h2>
         <p>Email: contact@iattv.org</p>
     </div>
     
-    <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
+    <div class="footer">&copy; 2025 IATTV - Todos los Derechos Reservados.</div>
 </body>
 </html>
