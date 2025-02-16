@@ -7,12 +7,10 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #0165fc; }
         .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h1 { color: #2c3e50; }
+        h1, h2 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
         .footer { margin-top: 20px; font-size: 14px; color: #777; }
         .lang-switch { position: absolute; top: 20px; right: 20px; background: white; padding: 5px 10px; border-radius: 5px; }
-        .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-        .donate-button img { width: 150px; }
         .section { margin-top: 20px; text-align: left; padding: 10px; }
         .toggle-button { background: #0165fc; color: white; border: none; cursor: pointer; font-size: 16px; padding: 5px 10px; border-radius: 5px; }
         .hidden-content { display: none; margin-top: 10px; padding: 10px; background: #f4f4f4; border-radius: 5px; }
@@ -43,6 +41,10 @@
     <div class="container section">
         <h2>Our Mission</h2>
         <p>To inspire, uplift, and serve our community with love and faith.</p>
+        <button class="toggle-button" onclick="toggleContent('missionContent', this)">Show More</button>
+        <div id="missionContent" class="hidden-content">
+            <p>Through our efforts, we aim to bring light and hope to those who need it the most.</p>
+        </div>
     </div>
     
     <div class="container section">
@@ -73,6 +75,10 @@
     <div class="container section">
         <h2>Contact Us</h2>
         <p>Email: contact@iattv.org</p>
+        <button class="toggle-button" onclick="toggleContent('contactContent', this)">Show More</button>
+        <div id="contactContent" class="hidden-content">
+            <p>We are here to support and answer any questions you may have. Reach out anytime!</p>
+        </div>
     </div>
     
     <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
