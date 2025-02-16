@@ -14,6 +14,8 @@
         .section { margin-top: 20px; text-align: left; padding: 10px; }
         .toggle-button { background: #0165fc; color: white; border: none; cursor: pointer; font-size: 16px; padding: 5px 10px; border-radius: 5px; }
         .hidden-content { display: none; margin-top: 10px; padding: 10px; background: #f4f4f4; border-radius: 5px; }
+        .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .donate-button img { width: 200px; }
     </style>
     <script>
         function toggleContent(id, button) {
@@ -53,6 +55,16 @@
         <button class="toggle-button" onclick="toggleContent('supportContent', this)">Show More</button>
         <div id="supportContent" class="hidden-content">
             <p>Click below to contribute and make a difference.</p>
+        </div>
+    </div>
+    
+    <div class="container section">
+        <h2>Testimonies</h2>
+        <p>Read how our ministry has impacted lives.</p>
+        <button class="toggle-button" onclick="toggleContent('testimoniesContent', this)">Show More</button>
+        <div id="testimoniesContent" class="hidden-content">
+            <p>"IATTV changed my life. Their support and guidance helped me through difficult times." - John D.</p>
+            <p>"Being part of this community has brought me closer to my faith." - Maria S.</p>
         </div>
     </div>
     
