@@ -10,8 +10,15 @@
         h1 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
         .footer { margin-top: 20px; font-size: 14px; color: #ddd; }
-        .lang-switch { position: absolute; top: 20px; right: 20px; }
-        .lang-switch a { text-decoration: none; font-size: 16px; font-weight: bold; color: #2c3e50; }
+        .lang-switch { 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 5px 10px; 
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
         .donate-button-container {
             position: fixed;
             bottom: 20px;
@@ -19,12 +26,12 @@
             z-index: 1000;
         }
         .donate-button img {
-            width: 180px; /* Bigger button */
+            width: 150px; /* Bigger button */
         }
     </style>
 </head>
 <body>
-    <!-- Language Switch -->
+    <!-- Language Switch with Background -->
     <div class="lang-switch">
         <a href="index-es.html">🇺🇸 Spanish</a>
     </div>
