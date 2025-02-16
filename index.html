@@ -12,20 +12,20 @@
         .footer { margin-top: 20px; font-size: 14px; color: #777; }
         .lang-switch { position: absolute; top: 20px; right: 20px; background: white; padding: 5px 10px; border-radius: 5px; }
         .section { margin-top: 20px; text-align: left; padding: 10px; }
-        .toggle-button { background: #0165fc; color: white; border: none; cursor: pointer; font-size: 16px; padding: 5px 10px; border-radius: 5px; }
+        .toggle-text { color: #0165fc; cursor: pointer; font-size: 16px; text-decoration: underline; }
         .hidden-content { display: none; margin-top: 10px; padding: 10px; background: #f4f4f4; border-radius: 5px; }
         .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
         .donate-button img { width: 200px; }
     </style>
     <script>
-        function toggleContent(id, button) {
+        function toggleContent(id, element) {
             var content = document.getElementById(id);
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
-                button.innerText = "Show Less";
+                element.innerText = "Show Less";
             } else {
                 content.style.display = "none";
-                button.innerText = "Show More";
+                element.innerText = "Show More";
             }
         }
     </script>
@@ -42,29 +42,27 @@
     
     <div class="container section">
         <h2>Our Mission</h2>
-        <p>To inspire, uplift, and serve our community with love and faith.</p>
-        <button class="toggle-button" onclick="toggleContent('missionContent', this)">Show More</button>
+        <p>To inspire, uplift, and serve our community with love and faith. <span class="toggle-text" onclick="toggleContent('missionContent', this)">Show More</span></p>
         <div id="missionContent" class="hidden-content">
-            <p>Through our efforts, we aim to bring light and hope to those who need it the most.</p>
+            <p>Through our efforts, we aim to bring light and hope to those who need it the most. Our mission is to provide guidance, support, and a sense of belonging to individuals who seek faith and encouragement.</p>
         </div>
     </div>
     
     <div class="container section">
         <h2>Support Our Mission</h2>
-        <p>Your donations help us continue our work.</p>
-        <button class="toggle-button" onclick="toggleContent('supportContent', this)">Show More</button>
+        <p>Your donations help us continue our work. <span class="toggle-text" onclick="toggleContent('supportContent', this)">Show More</span></p>
         <div id="supportContent" class="hidden-content">
-            <p>Click below to contribute and make a difference.</p>
+            <p>By contributing, you enable us to expand our outreach, provide resources, and organize events that bring people together in faith and fellowship.</p>
         </div>
     </div>
     
     <div class="container section">
         <h2>Testimonies</h2>
-        <p>Read how our ministry has impacted lives.</p>
-        <button class="toggle-button" onclick="toggleContent('testimoniesContent', this)">Show More</button>
+        <p>Read how our ministry has impacted lives. <span class="toggle-text" onclick="toggleContent('testimoniesContent', this)">Show More</span></p>
         <div id="testimoniesContent" class="hidden-content">
             <p>"IATTV changed my life. Their support and guidance helped me through difficult times." - John D.</p>
-            <p>"Being part of this community has brought me closer to my faith." - Maria S.</p>
+            <p>"Being part of this community has brought me closer to my faith and given me a sense of peace." - Maria S.</p>
+            <p>"The prayers and encouragement I received have given me new strength to overcome challenges." - Peter R.</p>
         </div>
     </div>
     
@@ -86,10 +84,9 @@
     
     <div class="container section">
         <h2>Contact Us</h2>
-        <p>Email: contact@iattv.org</p>
-        <button class="toggle-button" onclick="toggleContent('contactContent', this)">Show More</button>
+        <p>Email: contact@iattv.org <span class="toggle-text" onclick="toggleContent('contactContent', this)">Show More</span></p>
         <div id="contactContent" class="hidden-content">
-            <p>We are here to support and answer any questions you may have. Reach out anytime!</p>
+            <p>We are here to support and answer any questions you may have. Reach out anytime! Our team is always available to listen, provide guidance, and share resources that can help you in your faith journey.</p>
         </div>
     </div>
     
