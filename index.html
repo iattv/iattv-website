@@ -9,11 +9,10 @@
         .container { max-width: 600px; margin: auto; }
         h1 { color: #2c3e50; }
         p { font-size: 18px; color: #555; }
-        .donate-button { background: #28a745; color: white; padding: 10px 20px; text-decoration: none; font-size: 18px; border-radius: 5px; }
-        .donate-button:hover { background: #218838; }
         .footer { margin-top: 20px; font-size: 14px; color: #777; }
         .lang-switch { position: absolute; top: 20px; right: 20px; }
     </style>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
 </head>
 <body>
     <!-- Language Switch -->
@@ -31,7 +30,20 @@
         <p>Your donations help us continue our work. Click below to contribute.</p>
         
         <!-- PayPal Donation Button -->
-        <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Donate Now</a>
+        <div id="donate-button-container">
+            <div id="donate-button"></div>
+            <script>
+                PayPal.Donation.Button({
+                    env:'production',
+                    hosted_button_id:'KRX475LR72CA4',
+                    image: {
+                        src:'https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif',
+                        alt:'Donar con el botón PayPal',
+                        title:'PayPal - The safer, easier way to pay online!'
+                    }
+                }).render('#donate-button');
+            </script>
+        </div>
         
         <h2>Contact Us</h2>
         <p>Email: contact@iattv.org</p>
@@ -40,4 +52,3 @@
     <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
 </body>
 </html>
-
