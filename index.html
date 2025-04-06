@@ -1,95 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IATTV - Ministry</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #0165fc; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h1, h2 { color: #2c3e50; }
-        p { font-size: 18px; color: #555; }
-        .footer { margin-top: 20px; font-size: 14px; color: #777; }
-        .lang-switch { position: absolute; top: 20px; right: 20px; background: white; padding: 5px 10px; border-radius: 5px; }
-        .section { margin-top: 20px; text-align: left; padding: 10px; }
-        .toggle-text { color: #0165fc; cursor: pointer; font-size: 16px; text-decoration: underline; }
-        .hidden-content { display: none; margin-top: 10px; padding: 10px; background: #f4f4f4; border-radius: 5px; }
-        .donate-button-container { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
-        .donate-button img { width: 200px; }
-    </style>
-    <script>
-        function toggleContent(id, element) {
-            var content = document.getElementById(id);
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-                element.innerText = "Show Less";
-            } else {
-                content.style.display = "none";
-                element.innerText = "Show More";
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofrenda - Yo Soy La Vid Verdadera</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      display: block;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="index-es.html">🇺🇸 Spanish</a>
-    </div>
-
-    <div class="container">
-        <h1>Welcome to IATTV</h1>
-        <p>We are dedicated to spreading faith and positivity through our ministry.</p>
-    </div>
-    
-    <div class="container section">
-        <h2>Our Mission</h2>
-        <p>To inspire, uplift, and serve our community with love and faith. <span class="toggle-text" onclick="toggleContent('missionContent', this)">Show More</span></p>
-        <div id="missionContent" class="hidden-content">
-            <p>Through our efforts, we aim to bring light and hope to those who need it the most. Our mission is to provide guidance, support, and a sense of belonging to individuals who seek faith and encouragement.</p>
-        </div>
-    </div>
-    
-    <div class="container section">
-        <h2>Support Our Mission</h2>
-        <p>Your donations help us continue our work. <span class="toggle-text" onclick="toggleContent('supportContent', this)">Show More</span></p>
-        <div id="supportContent" class="hidden-content">
-            <p>By contributing, you enable us to expand our outreach, provide resources, and organize events that bring people together in faith and fellowship.</p>
-        </div>
-    </div>
-    
-    <div class="container section">
-        <h2>Testimonies</h2>
-        <p>Read how our ministry has impacted lives. <span class="toggle-text" onclick="toggleContent('testimoniesContent', this)">Show More</span></p>
-        <div id="testimoniesContent" class="hidden-content">
-            <p>"IATTV changed my life. Their support and guidance helped me through difficult times." - John D.</p>
-            <p>"Being part of this community has brought me closer to my faith and given me a sense of peace." - Maria S.</p>
-            <p>"The prayers and encouragement I received have given me new strength to overcome challenges." - Peter R.</p>
-        </div>
-    </div>
-    
-    <div class="donate-button-container">
-        <div id="donate-button"></div>
-        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-        <script>
-        PayPal.Donation.Button({
-            env:'production',
-            hosted_button_id:'KRX475LR72CA4',
-            image: {
-                src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-                alt:'Donate with PayPal',
-                title:'PayPal - The safer, easier way to pay online!',
-            }
-        }).render('#donate-button');
-        </script>
-    </div>
-    
-    <div class="container section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@iattv.org <span class="toggle-text" onclick="toggleContent('contactContent', this)">Show More</span></p>
-        <div id="contactContent" class="hidden-content">
-            <p>We are here to support and answer any questions you may have. Reach out anytime! Our team is always available to listen, provide guidance, and share resources that can help you in your faith journey.</p>
-        </div>
-    </div>
-    
-    <div class="footer">&copy; 2025 IATTV - All Rights Reserved.</div>
+  <a href="https://sites.google.com/view/yo-soy-la-vid-verdadera/home" target="_blank">
+    <img src="image.png" alt="Haz clic para ofrendar - Yo Soy La Vid Verdadera">
+  </a>
 </body>
 </html>
